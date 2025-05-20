@@ -1,0 +1,22 @@
+Array
+(
+    [menu_id] => 6
+    [dish_name] => Veg Noodles Soup [200 ml] 
+    [price] => 120.00
+)
+Array
+(
+    [CustomerID] => 1
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [menu_id] => 6
+                    [dish_name] => Veg Noodles Soup [200 ml] 
+                    [price] => 120.00
+                    [quantity] => 1
+                )
+
+        )
+
+)

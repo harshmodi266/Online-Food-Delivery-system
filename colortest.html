@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazeez Restaurant | Fine Dining</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            background-color: #FDF6E3;
+            color: #1B3A57;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(27, 58, 87, 0.9);
+            padding: 15px 0;
+            text-align: center;
+            color: #D4AF37;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .hero {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('fine-dining.jpg') center/cover fixed;
+            color: #FFF;
+            font-size: 2rem;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(27, 58, 87, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+        .btn {
+            background: #D4AF37;
+            padding: 14px 28px;
+            color: #1B3A57;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background: #C4A35A;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+        footer {
+            background: #1B3A57;
+            color: #D4AF37;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lazeez Restaurant</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Timeless Taste, Unmatched Elegance</h2>
+            <p>Fine dining redefined with exquisite flavors and premium service.</p>
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>About Lazeez</h2>
+        <p>At Lazeez, we bring you an experience of luxury and taste. Our chefs craft dishes with perfection, ensuring every bite is a journey of flavors.</p>
+    </section>
+
+    <section id="menu" class="fade-in">
+        <h2>Our Signature Dishes</h2>
+        <p>Indulge in our carefully curated menu, featuring only the finest ingredients and bold flavors.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Lazeez Restaurant | Fine Dining Redefined</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeInElements = document.querySelectorAll(".fade-in");
+            function checkVisibility() {
+                fadeInElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+            window.addEventListener("scroll", checkVisibility);
+            checkVisibility();
+        });
+    </script>
+</body>
+</html>
