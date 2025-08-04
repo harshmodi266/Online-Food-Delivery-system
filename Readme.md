@@ -181,26 +181,11 @@ Implement a loyalty program for regular customers.
 
 Introduce eco-friendly packaging options.
 
-Contributors
-
-
-
-
-
-Jainam Mochi
-
-
-
-Vidhi Mochi
-
-
-
-Harsh Modi
-
+Created by Harsh Modi
 Acknowledgments
 
 
-
+gread :- 250 into 235 
 
 
 Thanks to our project guides, Dr. Jignesh Rami and Dr. Kirit Chokhavala, for their guidance.
